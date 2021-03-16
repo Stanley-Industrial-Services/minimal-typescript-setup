@@ -2,14 +2,14 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This repository contains a simple setup for Node.js project with TypeScript. Feel free to take a look around the source code and step-by-step commit history, clone and fork the repo to try it out, and [open Issues](https://github.com/bobaekang/minimal-typescript-setup/issues) to share your suggestions for improvements.
+This repository contains a simple setup for Node.js project with TypeScript. Feel free to take a look around the source code and step-by-step commit history, clone and fork the repo to try it out, and [open Issues](https://github.com/Stanley-Industrial-Services/minimal-typescript-setup/issues) to share your suggestions for improvements.
 
 Please refer to [this blog post](https://bobaekang.com/blog/minimal-typescript-project-setup-for-curious-minds/) for a detailed explanation.
 
 ## Project setup
 
 ```shell
-git clone https://github.com/bobaekang/minimal-typescript-setup.git
+git clone https://github.com/Stanley-Industrial-Services/minimal-typescript-setup.git
 cd minimal-typescript-setup
 
 npm install

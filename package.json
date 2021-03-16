@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bobaekang/minimal-typescript-setup.git"
+    "url": "git+https://github.com/Stanley-Industrial-Services/minimal-typescript-setup"
   },
   "keywords": [
     "minimal",
@@ -23,9 +23,9 @@
   "author": "Bobae Kang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bobaekang/minimal-typescript-setup/issues"
+    "url": "https://github.com/Stanley-Industrial-Services/minimal-typescript-setup/issues"
   },
-  "homepage": "https://github.com/bobaekang/minimal-typescript-setup#readme",
+  "homepage": "https://github.com/Stanley-Industrial-Services/minimal-typescript-setup#readme",
   "devDependencies": {
     "@types/mocha": "^5.2.7",
     "@types/node": "^13.13.2",
