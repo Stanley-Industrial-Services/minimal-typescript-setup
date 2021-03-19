@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# echo KEYFILE was ${KEYFILE}
+PRODMYSQLSERVER=${PRODMYSQLSERVER-"prod-remote-services.chrlxa1ralx9.eu-central-1.rds.amazonaws.com"}
+DEVMYSQLSERVER=${DEVMYSQLSERVER-"dev-remote-services.chrlxa1ralx9.eu-central-1.rds.amazonaws.com"}
+PRODHOST=${PRODHOST-"18.159.234.7"}
+DEVHOST=${DEVHOST-"52.59.222.163"}
+
+if [ -z ${KEYFILE} ]; then
+    echo "No KEYFILE entered... ${KEYFILE}"
+    exit;
+fi
+
+kill -9 `ps ax |grep  "ssh.*amazonaws" |cut -d' ' -f1` &> /dev/null
+
+ssh -i ${KEYFILE} -N -L 3301:${PRODMYSQLSERVER}:3306  ubuntu@${PRODHOST} &
+ssh -i ${KEYFILE} -N -L 3302:${DEVMYSQLSERVER}:3306  ubuntu@${DEVHOST} &

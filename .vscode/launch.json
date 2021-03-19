@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [{
+            "name": "Debug InSite API production",
+            "type": "node",
+            "request": "launch",
+            // Use ts-node as drop-in replacement for node
+            "runtimeArgs": ["-r", "ts-node/register"],
+            "args": ["${workspaceRoot}/InsiteApi/src/index.ts"],
+            "cwd": "${workspaceFolder}/InsiteApi",
+            "env": {
+                "NODE_ENV": "production"
+            }
+        }, {
+            "name": "Debug InSite API staging",
+            "type": "node",
+            "request": "launch",
+            // Use ts-node as drop-in replacement for node
+            "runtimeArgs": ["-r", "ts-node/register"],
+            "args": ["${workspaceRoot}/InsiteApi/src/index.ts"],
+            "cwd": "${workspaceFolder}/InsiteApi",
+            "env": {
+                "NODE_ENV": "staging"
+            }
+        },
+        {
+            "name": "Debug InSite API development",
+            "type": "node",
+            "request": "launch",
+            // Use ts-node as drop-in replacement for node
+            "runtimeArgs": ["-r", "ts-node/register"],
+            "args": ["${workspaceRoot}/InsiteApi/src/index.ts"],
+            "cwd": "${workspaceFolder}/InsiteApi",
+            "env": {
+                "NODE_ENV": "development"
+            }
+        }
+    ]
+}

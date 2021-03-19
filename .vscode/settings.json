@@ -1,0 +1,81 @@
+{
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.autoIndent": "full",
+    "editor.tabSize": 4,
+    "editor.lineNumbers": "on",
+    "editor.minimap.maxColumn": 120,
+    "editor.wordWrap": "off",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/coverage/*/**": true,
+        "**/.nyc_output/*/**": true
+    },
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "git.autofetch": true,
+    "window.zoomLevel": 1,
+    "prettier.useTabs": false,
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true,
+    "prettier.tsxSingleQuote": true,
+    "prettier.jsxBracketSameLine": true,
+    "prettier.printWidth": 115,
+    "prettier.tabWidth": 4,
+    "prettier.arrowParens": "always",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "team.showWelcomeMessage": true,
+    "cSpell.words": [
+        "PROCALL",
+        "Truff",
+        "codecov",
+        "emerg",
+        "insite",
+        "lcov",
+        "logginglevel",
+        "managedobjects",
+        "microservice",
+        "nexmo",
+        "nyan",
+        "realtime",
+        "sbdinc",
+        "uiot"
+    ],
+    "eslint.enable": true,
+    "Es6tssort": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/._*": true,
+        "**/_*": true,
+        "tests/**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "dist/*": true,
+        "**/*.js": true,
+        "**/*.js.map": true,
+        "**/*.d.ts": true
+    },
+    "testExplorer.mergeSuites": true,
+    "testExplorer.showOnRun": true,
+    "mochaExplorer.files": "tests/**/*.ts",
+    "mochaExplorer.require": [
+        "ts-node/register",
+        "source-map-support/register"
+    ],
+    "mochaExplorer.launcherScript": "node_modules/mocha-explorer-launcher-scripts/vscode-test",
+    "mochaExplorer.autoload": false,
+    "mochaExplorer.ipcRole": "server",
+    "mochaExplorer.env": {
+        "VSCODE_VERSION": "insiders",
+        "ELECTRON_RUN_AS_NODE": null,
+        "NODE_ENV": "test"
+    },
+    "mocha.enabled": true,
+    "mochaExplorer.mochaPath": "node_modules/ts-mocha"
+}

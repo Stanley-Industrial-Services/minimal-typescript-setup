@@ -1,19 +1,21 @@
 {
-  "name": "minimal-typescript-setup",
+  "name": "upload-influx-data",
   "private": true,
   "version": "1.0.0",
-  "description": "Minimal TypeScript project setup for curious minds",
+  "description": "Upload influx data from ELU production database",
   "main": "index.js",
   "scripts": {
     "build": "tsc --build",
     "lint": "tsc --noEmit && eslint \"**/*.ts\" --quiet --fix",
     "serve": "ts-node ./src",
     "start": "node ./dist",
-    "test": "mocha -r ts-node/register **/test/**/*.test.ts"
+    "migrate": "./scripts/sync-prod-data && yarn build && yarn start && ./scripts/end-all-ssh-tunnels",
+    "test": "mocha -r ts-node/register **/test/**/*.test.ts",
+    "watch": "tsc -watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Stanley-Industrial-Services/minimal-typescript-setup"
+    "url": "git+https://github.com/Stanley-Industrial-Services/upload-influx-data"
   },
   "keywords": [
     "minimal",
@@ -23,11 +25,12 @@
   "author": "Bobae Kang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Stanley-Industrial-Services/minimal-typescript-setup/issues"
+    "url": "https://github.com/Stanley-Industrial-Services/upload-influx-data/issues"
   },
-  "homepage": "https://github.com/Stanley-Industrial-Services/minimal-typescript-setup#readme",
+  "homepage": "https://github.com/Stanley-Industrial-Services/upload-influx-data#readme",
   "devDependencies": {
     "@types/mocha": "^5.2.7",
+    "@types/mysql2": "github:types/mysql2",
     "@types/node": "^13.13.2",
     "@typescript-eslint/eslint-plugin": "^2.29.0",
     "@typescript-eslint/parser": "^2.29.0",
@@ -38,5 +41,12 @@
     "prettier": "1.19.1",
     "ts-node": "^8.9.0",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.11.0",
+    "@influxdata/influxdb-client-apis": "^1.11.0",
+    "dotenv": "^8.2.0",
+    "moment": "^2.29.1",
+    "mysql2": "^2.2.5"
   }
 }
